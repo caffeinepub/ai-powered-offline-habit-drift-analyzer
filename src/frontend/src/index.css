@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+
+    /* Light mode (not primary use case, but defined) */
+    --background: 0.97 0 0;
+    --foreground: 0.12 0 0;
+    --card: 0.94 0 0;
+    --card-foreground: 0.12 0 0;
+    --popover: 0.97 0 0;
+    --popover-foreground: 0.12 0 0;
+    --primary: 0.55 0.18 264;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.9 0 0;
+    --secondary-foreground: 0.12 0 0;
+    --muted: 0.9 0 0;
+    --muted-foreground: 0.5 0 0;
+    --accent: 0.9 0 0;
+    --accent-foreground: 0.12 0 0;
+    --destructive: 0.6 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+    --border: 0.85 0 0;
+    --input: 0.85 0 0;
+    --ring: 0.55 0.18 264;
+    --chart-1: 0.55 0.18 264;
+    --chart-2: 0.72 0.15 185;
+    --chart-3: 0.75 0.18 70;
+    --chart-4: 0.65 0.22 25;
+    --chart-5: 0.6 0.2 145;
+    --sidebar: 0.94 0 0;
+    --sidebar-foreground: 0.12 0 0;
+    --sidebar-primary: 0.55 0.18 264;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.9 0 0;
+    --sidebar-accent-foreground: 0.12 0 0;
+    --sidebar-border: 0.85 0 0;
+    --sidebar-ring: 0.55 0.18 264;
+  }
+
+  .dark {
+    /* Near-black background */
+    --background: 0.1 0 0;
+    --foreground: 0.93 0 0;
+
+    /* Charcoal card surfaces */
+    --card: 0.14 0 0;
+    --card-foreground: 0.93 0 0;
+
+    --popover: 0.17 0 0;
+    --popover-foreground: 0.93 0 0;
+
+    --primary: 0.75 0.15 264;
+    --primary-foreground: 0.1 0 0;
+
+    --secondary: 0.18 0 0;
+    --secondary-foreground: 0.93 0 0;
+
+    --muted: 0.18 0 0;
+    --muted-foreground: 0.5 0 0;
+
+    --accent: 0.22 0 0;
+    --accent-foreground: 0.93 0 0;
+
+    --destructive: 0.65 0.22 25;
+    --destructive-foreground: 0.93 0 0;
+
+    --border: 0.93 0 0 / 8%;
+    --input: 0.93 0 0 / 10%;
+    --ring: 0.65 0.15 264;
+
+    --chart-1: 0.65 0.18 264;
+    --chart-2: 0.72 0.15 185;
+    --chart-3: 0.75 0.18 70;
+    --chart-4: 0.65 0.22 25;
+    --chart-5: 0.6 0.2 145;
+
+    --sidebar: 0.14 0 0;
+    --sidebar-foreground: 0.93 0 0;
+    --sidebar-primary: 0.65 0.18 264;
+    --sidebar-primary-foreground: 0.93 0 0;
+    --sidebar-accent: 0.18 0 0;
+    --sidebar-accent-foreground: 0.93 0 0;
+    --sidebar-border: 0.93 0 0 / 8%;
+    --sidebar-ring: 0.55 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Force dark mode always for this analytics app */
+  :root {
+    color-scheme: dark;
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+  }
+}
